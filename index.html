@@ -7,14 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="assets/fonts/style.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
@@ -22,7 +18,17 @@
     <header class="header">
       <nav class="container">
         <a class="logo" href="#">beauty<span>salon.</span></a>
-        <div class="menu">...</div>
+        <div class="menu">
+          <ul class="grid">
+            <li><a class="title" href="#home">Início</a></li>
+            <li><a class="title" href="#about">Sobre</a></li>
+            <li><a class="title" href="#services">Serviços</a></li>
+            <li><a class="title" href="#testimonials">Depoimentos</a></li>
+            <li><a class="title" href="#contact">Contato</a></li>
+          </ul>
+        </div>
+        <div class="toggle icon-menu"></div>
+        <div class="toggle icon-close"></div>
       </nav>
     </header>
     <!-- FECHA HEADER -->
@@ -30,13 +36,13 @@
     <!-- ABRE MAIN -->
     <main class="main">
       <!-- ABRE SECTION HOME -- MAIN  -->
-      <section class="section home">
+      <section class="section home" id="home">
         <div class="container grid">
           <div class="image">
             <img src="./img/hero.png" alt="imagem 1" />
           </div>
           <div class="text">
-            <h1>Saúde natural para os seus cabelos</h1>
+            <h2 class="title">Saúde natural para os seus cabelos</h2>
             <p>
               Um salão exclusivo em São Paulo, especializado em tratamentos
               naturais.
@@ -45,18 +51,87 @@
           </div>
         </div>
       </section>
-
+      <!-- FECHA SECTION HOME -- MAIN  -->
       <div class="divider-1"></div>
 
-      <section class="section">
-        <div class="conatiner">outra section</div>
+      <!-- ABRE SECTION SOBRE -- MAIN  -->
+      <section class="section about" id="about">
+        <div class="container grid">
+          <div class="image">
+            <img src="./img/sobre.svg" alt="" />
+          </div>
+          <div class="text">
+            <h2 class="title">Sobre nós</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+              nulla architecto doloremque ducimus minus quibusdam ea eum
+              aspernatur, quidem dolores obcaecati voluptatum alias. Pariatur
+              doloremque error obcaecati vero quibusdam consectetur. <br />
+            </p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Accusamus est quos omnis itaque doloribus tempore consectetur
+              voluptatum ipsum quibusdam, nam expedita sapiente quaerat quisquam
+              officiis atque hic distinctio optio iusto! <br />
+            </p>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel,
+              placeat eum. Tempora facere id neque doloremque, ipsam deserunt
+              pariatur vero dolore consequatur eveniet, ratione cumque quibusdam
+              quam veritatis? Consectetur, odio! <br />
+            </p>
+          </div>
+        </div>
       </section>
-      <!-- FECHA SECTION HOME -- MAIN  -->
+      <!-- FECHA SECTION SOBRE -- MAIN  -->
+      <div class="divider-2"></div>
+
+      <!-- ABRE SECTION SERVIÇOS -- MAIN  -->
+      <section class="section" id="services">
+        <div class="container grid">
+          <header>
+            <h2 class="title">Serviços</h2>
+            <p>
+              Com mais de 10 anos no mercado, o <strong>Beautysalon</strong> já
+              conquistou clientes de inúmeros países com seus tratamentos
+              exclusivos e totalmente naturais
+            </p>
+          </header>
+          <div class="cards grid">
+            <div class="card">
+              <i class="icon-woman-hair"></i>
+              <h3 class="title">Terapia capilar</h3>
+              <p>
+                Terapia completa para couro cabeludo e fios, protegendo todos os
+                tipos de cabelos, inclusive os longos e finos. <br />
+              </p>
+            </div>
+            <div class="card">
+              <i class="icon-trim"></i>
+              <h3 class="title">Cortes</h3>
+              <p>
+                A nossa equipe é repleta de profissionais renomados, famosos por
+                lançarem tendências com cortes diferenciados e clássicos. <br />
+              </p>
+            </div>
+            <div class="card">
+              <i class="icon-cosmetic"></i>
+              <h3 class="title">Tratamentos</h3>
+              <p>
+                O beautysalon conta com diversos tratamentos naturais e
+                totalmente veganos, para qualquer tipo de cabelo. <br />
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- FECHA SECTION SERVIÇOS -- MAIN  -->
     </main>
     <!-- FECHA MAIN -->
 
     <!-- ABRE FOOTER -->
     <footer></footer>
     <!-- FECHA FOOTER -->
+    <script src="main.js"></script>
   </body>
 </html>
