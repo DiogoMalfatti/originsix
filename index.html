@@ -11,10 +11,14 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="assets/fonts/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <!-- ABRE HEADER -->
+    <!-- HEADER -->
     <header class="header">
       <nav class="container">
         <a class="logo" href="#">beauty<span>salon.</span></a>
@@ -31,11 +35,11 @@
         <div class="toggle icon-close"></div>
       </nav>
     </header>
-    <!-- FECHA HEADER -->
+    <!-- / HEADER -->
 
-    <!-- ABRE MAIN -->
+    <!-- MAIN -->
     <main class="main">
-      <!-- ABRE SECTION HOME -- MAIN  -->
+      <!-- HOME -- MAIN  -->
       <section class="section home" id="home">
         <div class="container grid">
           <div class="image">
@@ -51,10 +55,10 @@
           </div>
         </div>
       </section>
-      <!-- FECHA SECTION HOME -- MAIN  -->
+      <!-- / HOME -- MAIN  -->
       <div class="divider-1"></div>
 
-      <!-- ABRE SECTION SOBRE -- MAIN  -->
+      <!-- SOBRE -- MAIN  -->
       <section class="section about" id="about">
         <div class="container grid">
           <div class="image">
@@ -83,10 +87,10 @@
           </div>
         </div>
       </section>
-      <!-- FECHA SECTION SOBRE -- MAIN  -->
+      <!-- / SOBRE -- MAIN  -->
       <div class="divider-2"></div>
 
-      <!-- ABRE SECTION SERVIÇOS -- MAIN  -->
+      <!-- SERVIÇOS -- MAIN  -->
       <section class="section" id="services">
         <div class="container grid">
           <header>
@@ -125,13 +129,104 @@
           </div>
         </div>
       </section>
-      <!-- FECHA SECTION SERVIÇOS -- MAIN  -->
-    </main>
-    <!-- FECHA MAIN -->
+      <!-- / SERVIÇOS -- MAIN  -->
+      <div class="divider-1"></div>
 
-    <!-- ABRE FOOTER -->
+      <!-- TESTIMONIALS -- MAIN  -->
+      <section class="section" id="testimonials">
+        <div class="container">
+          <header>
+            <h2 class="title">Depoimentos de quem já passou por aqui</h2>
+          </header>
+          <div class="testimonials swiper-container">
+            <div class="swiper-wrapper">
+              <div class="testimonial swiper-slide">
+                <blockquote>
+                  <p>
+                    <span>&ldquo;</span>Eu sou cliente do Beautysalon há 5 anos
+                    e não troco por nada! Certamente meu cabelo mudou muito
+                    depois que comecei a tratar somente com produtos naturais e
+                    veganos. São profissionais incríveis e qualificados. <br />
+                  </p>
+                  <cite>
+                    <img src="./img/cliente1.jpg" alt="" />
+                    Wanessa Souza
+                  </cite>
+                </blockquote>
+              </div>
+              <div class="testimonial swiper-slide">
+                <blockquote>
+                  <p>
+                    <span>&ldquo;</span>Minha mãe frequenta o salão há anos e me
+                    levou um dia para conhecer. Minha experiência foi incrível,
+                    eu continuo fazendo o a terapia capilar e isso salvou o meu
+                    cabelo. Adoro todos os profissionais do Beautysalon. <br />
+                  </p>
+                  <cite>
+                    <img src="./img/cliente2.jpg" alt="" />
+                    Luna Falcão
+                  </cite>
+                </blockquote>
+              </div>
+              <div class="testimonial swiper-slide">
+                <blockquote>
+                  <p>
+                    <span>&ldquo;</span> Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. Esse vitae enim illum eum repellat
+                    aliquid. Sequi quisquam odio id quibusdam, maiores aliquam
+                    molestiae sapiente debitis explicabo labore. Voluptas, vel
+                    adipisci.
+                    <br />
+                  </p>
+                  <cite>
+                    <img src="./img/cliente3.jpg" alt="" />
+                    nome
+                  </cite>
+                </blockquote>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+      <!-- / TESTIMONIALS -- MAIN  -->
+      <div class="divider-2"></div>
+
+      <!-- CONTACT -- MAIN  -->
+      <section class="section" id="contact">
+        <div class="container grid">
+          <div class="text">
+            <h2 class="title">Entre em contato com a gente!</h2>
+            <p>
+              Entre em contato com a Beautysalon, queremos tirar suas dúvidas,
+              ouvir suas críticas e sugestões. <br />
+            </p>
+            <a
+              href="https://api.whatsapp.com/send?phone=+5511998456754&text=Oi! este é teste de programador"
+              class="button"
+              target="_blank"
+            >
+              <i class="icon-whatsapp"></i>Entrar em contato
+            </a>
+          </div>
+          <div class="links">
+            <ul class="grid">
+              <li><i class="icon-phone"></i>11 99845-6754</li>
+              <li><i class="icon-map-pin"></i>R. Amauri Souza, 346</li>
+              <li><i class="icon-mail"></i>contato@beautysalon.com</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- / CONTACT -- MAIN  -->
+    </main>
+    <!-- / MAIN -->
+
+    <!-- FOOTER -->
     <footer></footer>
-    <!-- FECHA FOOTER -->
+    <!-- / FOOTER -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
     <script src="main.js"></script>
   </body>
 </html>

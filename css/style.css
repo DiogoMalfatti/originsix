@@ -1,4 +1,4 @@
-/* ==== ABRE RESET ==================== */
+/* ==== RESET ==================== */
 * {
   margin: 0;
   padding: 0;
@@ -14,9 +14,9 @@ img {
   width: 100%;
   height: auto;
 }
-/* ==== FECHA RESET ==================== */
+/* ==== / RESET ==================== */
 
-/* ==== ABRE BASE ==================== */
+/* ==== BASE ==================== */
 html {
   scroll-behavior: smooth;
 }
@@ -61,9 +61,9 @@ body {
     hsla(var(--hue), 36%, 57%, 1)
   );
 }
-/* ==== FECHA BASE ==================== */
+/* ==== / BASE ==================== */
 
-/* ==== ABRE VARIABLES ==================== */
+/* ==== VARIABLES ==================== */
 :root {
   --header-height: 4.5rem;
   /* colors */
@@ -77,9 +77,9 @@ body {
   --text-color-light: hsl(0 0% 98%);
   --body-color: hsl(0 0% 98%);
 }
-/* ==== FECHA VARIABLES ==================== */
+/* ==== / VARIABLES ==================== */
 
-/* ==== ABRE LAYOUT ==================== */
+/* ==== LAYOUT ==================== */
 .container {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
@@ -100,15 +100,15 @@ body {
 .section header strong {
   color: var(--base-color);
 }
-/* ==== FECHA LAYOUT ==================== */
+/* ==== / LAYOUT ==================== */
 
-/* ==== ABRE MAIN ==================== */
+/* ==== MAIN ==================== */
 .main {
   margin-top: calc(var(--header-height) + 2rem);
 }
-/* ==== FECHA MAIN ==================== */
+/* ==== / MAIN ==================== */
 
-/* ==== ABRE HEADER ==================== */
+/* ==== HEADER ==================== */
 .header {
   border-bottom: 1px solid #e4e4e4;
   margin-bottom: 2rem;
@@ -130,9 +130,9 @@ body {
 .logo span {
   color: var(--base-color);
 }
-/* ==== FECHA HEADER ==================== */
+/* ==== / HEADER ==================== */
 
-/* ==== ABRE NAVIGATION ==================== */
+/* ==== NAVIGATION ==================== */
 nav {
   height: var(--header-height);
   width: 100%;
@@ -208,9 +208,9 @@ nav.show div.icon-close {
   opacity: 1;
   top: 1.5rem;
 }
-/* ==== FECHA NAVIGATION ==================== */
+/* ==== / NAVIGATION ==================== */
 
-/* ==== ABRE SECTION HOME -- MAIN ==================== */
+/* ==== HOME -- MAIN ==================== */
 #home {
   overflow: hidden;
 }
@@ -246,9 +246,9 @@ nav.show div.icon-close {
 #home .text p {
   margin-bottom: 2rem;
 }
-/* ==== FECHA SECTION HOME -- MAIN ==================== */
+/* ==== / HOME -- MAIN ==================== */
 
-/* ==== ABRE SECTION SOBRE -- MAIN ==================== */
+/* ==== SOBRE -- MAIN ==================== */
 #about {
   background: white;
 }
@@ -267,6 +267,7 @@ nav.show div.icon-close {
 }
 #about .image {
   position: relative;
+  z-index: 1;
 }
 #about .image img,
 #about .image::before {
@@ -279,9 +280,9 @@ nav.show div.icon-close {
 #about .text p {
   margin-bottom: 2rem;
 }
-/* ==== FECHA SECTION SOBRE -- MAIN ==================== */
+/* ==== / SOBRE -- MAIN ==================== */
 
-/* ==== ABRE SECTION SERVIÇOS -- MAIN ==================== */
+/* ==== SERVIÇOS -- MAIN ==================== */
 .cards.grid {
   gap: 1.5rem;
 }
@@ -302,7 +303,85 @@ nav.show div.icon-close {
   font-style: 1.5rem;
   margin-bottom: 0.75rem;
 }
-/* ==== FECHA SECTION SERVIÇOS -- MAIN ==================== */
+/* ==== / SERVIÇOS -- MAIN ==================== */
 
-/* ==== ABRE FOOTER ==================== */
-/* ==== FECHA FOOTER ==================== */
+/* ==== TESTIMONIALS -- MAIN ==================== */
+#testimonials {
+  background: white;
+}
+#testimonials .container {
+  margin-left: 0;
+  margin-right: 0;
+}
+#testimonials header {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  margin-bottom: 0;
+}
+#testimonials blockquote {
+  padding: 2rem;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
+  border-radius: 0.25rem;
+}
+#testimonials blockquote p {
+  position: relative;
+  text-indent: 1.875rem;
+  margin-bottom: 1.5rem;
+  color: var(--title-color);
+}
+#testimonials blockquote p span {
+  font: 700 2.5rem serif;
+  position: absolute;
+  top: -0.5rem;
+  left: -1.875rem;
+  color: var(--base-color);
+}
+#testimonials cite {
+  display: flex;
+  align-items: center;
+  font-style: normal;
+}
+#testimonials cite img {
+  width: 2rem;
+  height: 2rem;
+  object-fit: cover;
+  clip-path: circle();
+  margin-right: 0.5rem;
+}
+/* ==== SWIPER TESTIMONIALS ==================== */
+.swiper-slide {
+  height: auto;
+  padding: 4rem 1rem;
+}
+.swiper-pagination-bullet-active {
+  background: var(--base-color);
+}
+/* ==== / SWIPER TESTIMONIALS==================== */
+/* ==== / TESTIMONIALS -- MAIN ==================== */
+
+/* ==== CONTACT -- MAIN ==================== */
+#contact .grid {
+  gap: 4rem;
+}
+#contact .text p {
+  margin-bottom: 2rem;
+}
+#contact .button i,
+#contact ul li i {
+  font-style: 1.5rem;
+  margin-right: 0.625rem;
+}
+#contact ul.grid {
+  gap: 2rem;
+}
+#contact ul li {
+  display: flex;
+  align-items: center;
+}
+#contact ul li i {
+  color: var(--base-color);
+}
+/* ==== / CONTACT -- MAIN ==================== */
+
+/* ==== FOOTER ==================== */
+/* ==== / FOOTER ==================== */
