@@ -21,13 +21,13 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  font: 400 1rem 'DM Sans', sans-serif;
+  font: 400 1rem var(--body-font);
   background: var(--body-color);
   color: var(--text-color);
   -webkit-font-smoothing: antialiased;
 }
 .title {
-  font: 700 1.875rem 'Poppins', sans-serif;
+  font: 700 var(--title-font-size) var(--title-font);
   color: var(--title-color);
   -webkit-font-smoothing: auto;
 }
@@ -39,8 +39,8 @@ body {
   align-items: center;
   padding: 0 2rem;
   border-radius: 0.25rem;
-  font: 500 1rem 'DM Sans', sans-serif;
-  transition: background 0.3s;
+  font: 500 1rem var(--body-font);
+  transition: 0.3s;
 }
 .button:hover {
   background: var(--base-color-alt);
@@ -76,6 +76,11 @@ body {
   --text-color: hsl(0 0% 46%);
   --text-color-light: hsl(0 0% 98%);
   --body-color: hsl(0 0% 98%);
+  /* fonts */
+  --title-font-size: 1.875rem;
+  --subtitle-font-size: 1rem;
+  --title-font: 'Poppins', sans-serif;
+  --body-font: 'DM Sans', sans-serif;
 }
 /* ==== / VARIABLES ==================== */
 
@@ -89,10 +94,13 @@ body {
   gap: 2rem;
 }
 .section {
-  padding: 5rem 0;
+  padding: calc(5rem + var(--header-height)) 0;
 }
 .section .title {
   margin-bottom: 1rem;
+}
+.section .subtitle {
+  font-size: var(--subtitle-font-size);
 }
 .section header {
   margin-bottom: 4rem;
@@ -103,9 +111,9 @@ body {
 /* ==== / LAYOUT ==================== */
 
 /* ==== MAIN ==================== */
-.main {
+/* .main {
   margin-top: calc(var(--header-height) + 2rem);
-}
+} */
 /* ==== / MAIN ==================== */
 
 /* ==== HEADER ==================== */
@@ -124,7 +132,7 @@ body {
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
 }
 .logo {
-  font: 700 1.31rem 'Poppins', sans-serif;
+  font: 700 1.31rem var(--title-font);
   color: var(--title-color);
 }
 .logo span {
@@ -150,7 +158,8 @@ nav ul li a {
   transition: color 0.2s;
   position: relative;
 }
-nav ul li a:hover {
+nav ul li a:hover,
+nav ul li a.active {
   color: var(--base-color);
 }
 nav ul li a::after {
@@ -163,7 +172,8 @@ nav ul li a::after {
   bottom: -1.5rem;
   transition: width 0.2s;
 }
-nav ul li a:hover::after {
+nav ul li a:hover::after,
+nav ul li a.active::after {
   width: 100%;
 }
 nav .menu {
@@ -390,6 +400,9 @@ nav.show div.icon-close {
 footer {
   background: var(--base-color);
 }
+footer.section {
+  padding: 4rem 0;
+}
 footer .logo {
   display: inline-block;
   margin-bottom: 1.5rem;
@@ -435,7 +448,130 @@ footer .social a:hover {
 }
 /* ==== / BACK-TO-TOP ==================== */
 
-/* ==== RESPONSIVO ==================== */
-@media (min-width: 992px) {
+/* ==== RESPONSIVO - MEDIA QUERIES ==================== */
+
+/* ==== EXTRA LARGE DEVICES: 1200 > ==================== */
+@media (min-width: 1200px) {
+  /* LAYOUT */
+  .main {
+    margin-top: var(--header-height);
+  }
+  .container {
+    max-width: 1120px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .section {
+    padding: 10rem 0;
+  }
+  .section header,
+  #testimonials header {
+    max-width: 32rem;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .button {
+    height: 3.125rem;
+  }
+  /* / LAYOUT */
+
+  /* NAV */
+  nav .menu {
+    opacity: 1;
+    visibility: visible;
+    top: 0;
+  }
+  nav .menu ul {
+    display: flex;
+    gap: 2rem;
+  }
+  nav .menu ul li a.title {
+    font: 400 1rem var(--title-font);
+    -webkit-font-smoothing: antialiased;
+  }
+  nav .menu ul li a.title.active {
+    font-weight: bold;
+    -webkit-font-smoothing: auto;
+  }
+  nav .icon-menu {
+    display: none;
+  }
+  /* / NAV */
+
+  /* HOME */
+  #home .image {
+    order: 1;
+  }
+  #home .text {
+    order: 0;
+    max-width: 24rem;
+    text-align: left;
+  }
+  #home .container {
+    grid-auto-flow: column;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+  /* / HOME */
+
+  /* SOBRE */
+  #about .container {
+    grid-auto-flow: column;
+    margin: 0 auto;
+  }
+  /* / SOBRE */
+
+  /* SERVIÇOS */
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .card {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+  /* / SERVIÇOS */
+
+  /* TESTIMONIALS */
+  #testimonials .container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* / TESTIMONIALS */
+
+  /* CONTACT */
+  #contact .container {
+    grid-auto-flow: column;
+    align-items: center;
+  }
+  #contact .text {
+    max-width: 25rem;
+  }
+  /* / CONTACT */
+
+  /* FOOTER */
+  footer.section {
+    padding: 3.75rem 0;
+  }
+  footer .container {
+    grid-auto-flow: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  footer .logo {
+    font-size: 2.25rem;
+  }
+  /* / FOOTER */
 }
-/* ==== / RESPONSIVO ==================== */
+/* ==== / EXTRA LARGE DEVICES: 1200 > ==================== */
+
+/* ==== LARGE DEVICES: 992 > ==================== */
+@media (min-width: 992px) {
+  :root {
+    --title-font-size: 2.25rem;
+    --subtitle-font-size: 1.125rem;
+  }
+}
+/* ==== LARGE DEVICES: 992 > ==================== */
+
+/* ==== / RESPONSIVO - MEDIA QUERIES ==================== */
